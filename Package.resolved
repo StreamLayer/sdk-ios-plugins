@@ -1,0 +1,15 @@
+{
+  "originHash" : "c962ffd54c2532f2a05ba1d80c1e1eddee28e39057290e827179bf353fa7df83",
+  "pins" : [
+    {
+      "identity" : "sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StreamLayer/sdk-ios.git",
+      "state" : {
+        "revision" : "0c7372a2c08b6b549e779041e10142aa656a8240",
+        "version" : "8.22.91"
+      }
+    }
+  ],
+  "version" : 3
+}
