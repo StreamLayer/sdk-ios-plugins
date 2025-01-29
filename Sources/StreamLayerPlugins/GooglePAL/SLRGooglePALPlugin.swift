@@ -11,10 +11,10 @@ import StreamLayerSDKGooglePAL
 
 public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
   
-  private let googlePALService: SLRGooglePALService
+  private let googlePALService: SLRGooglePALServiceFacade
   
   public init() {
-    self.googlePALService = SLRGooglePALService()
+    self.googlePALService = SLRGooglePALServiceFacade()
   }
   
   public func requestNonceManager(
