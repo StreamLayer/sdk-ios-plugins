@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "StreamLayerPlugins",
-  platforms: [.iOS(.v14)],
+  platforms: [.iOS(.v14), .tvOS(.v15)],
   products: [
     .library(
       name: "StreamLayerSDKPlugins",
