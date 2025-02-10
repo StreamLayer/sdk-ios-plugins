@@ -9,7 +9,7 @@ Add StreamLayerSDKWatchParty framework into your project during adding SPM packa
 Add this package into your project and import it:
 
 ```swift
-import StreamLayerSDKPlugins
+import StreamLayerSDKPluginsWatchParty
 ```
 
 Pass plugin bridge object to the sdk:
@@ -30,7 +30,7 @@ Add StreamLayerSDKGooglePAL framework into your project during adding SPM packag
 Add this package into your project and import it:
 
 ```swift
-import StreamLayerSDKPlugins
+import StreamLayerSDKPluginsGooglePAL
 ```
 
 Pass plugin bridge object to the sdk:

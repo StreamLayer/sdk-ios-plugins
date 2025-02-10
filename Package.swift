@@ -8,9 +8,14 @@ let package = Package(
   platforms: [.iOS(.v14), .tvOS(.v15)],
   products: [
     .library(
-      name: "StreamLayerSDKPlugins",
+      name: "StreamLayerSDKPluginsWatchParty",
       type: .static,
-      targets: ["StreamLayerSDKPlugins"]
+      targets: ["StreamLayerSDKPluginsWatchParty"]
+    ),
+    .library(
+      name: "StreamLayerSDKPluginsGooglePAL",
+      type: .static,
+      targets: ["StreamLayerSDKPluginsGooglePAL"]
     )
   ],
   dependencies: [
@@ -18,13 +23,22 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "StreamLayerSDKPlugins",
+      name: "StreamLayerSDKPluginsWatchParty",
       dependencies: [
         .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
+        .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
         .product(name: "StreamLayerWatchParty", package: "sdk-ios", condition: .when(platforms: [.iOS])),
+      ],
+      path: "Sources/WatchParty/"
+    ),
+    .target(
+      name: "StreamLayerSDKPluginsGooglePAL",
+      dependencies: [
+        .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
         .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
         .product(name: "StreamLayerGooglePAL", package: "sdk-ios", condition: .when(platforms: [.iOS, .tvOS]))
-      ]
+      ],
+      path: "Sources/GooglePAL/"
     )
   ]
 )
