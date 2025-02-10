@@ -6,8 +6,12 @@
 //
 
 import Foundation
-import StreamLayerSDK
 import StreamLayerSDKGooglePAL
+#if os(iOS)
+import StreamLayerSDK
+#elseif os(tvOS)
+import StreamLayerSDKTVOS
+#endif
 
 public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
   

@@ -5,6 +5,7 @@
 //  Created by Vadim Vitvitskii on 15.01.2025.
 //
 
+#if os(iOS)
 import Foundation
 import UIKit
 import StreamLayerSDK
@@ -161,3 +162,4 @@ extension SLRWatchPartyPlugin: SLRVonageConferenceDelegate {
     delegate?.disableAudioDucking()
   }
 }
+#endif

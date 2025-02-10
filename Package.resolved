@@ -1,13 +1,22 @@
 {
-  "originHash" : "c962ffd54c2532f2a05ba1d80c1e1eddee28e39057290e827179bf353fa7df83",
+  "originHash" : "7aa46ce743aeb0e67a304e124015d5130574f6bbe01d98d30f9ceabf8e933e7f",
   "pins" : [
     {
       "identity" : "sdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/StreamLayer/sdk-ios.git",
+      "location" : "https://github.com/StreamLayer/sdk-ios",
       "state" : {
-        "revision" : "0c7372a2c08b6b549e779041e10142aa656a8240",
-        "version" : "8.22.91"
+        "revision" : "846d2425b17717131ff7263e549e94e905eec987",
+        "version" : "8.22.115"
+      }
+    },
+    {
+      "identity" : "sl-programmatic-access-library-ios-tvos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StreamLayer/sl-programmatic-access-library-ios-tvos",
+      "state" : {
+        "revision" : "f5ce8abf41c471b398d8065d1d934c26efeb4529",
+        "version" : "2.8.1"
       }
     }
   ],
