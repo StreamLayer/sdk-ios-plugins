@@ -25,6 +25,6 @@ let package = Package(
         .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
         .product(name: "StreamLayerGooglePAL", package: "sdk-ios", condition: .when(platforms: [.iOS, .tvOS]))
       ]
-    ),
+    )
   ]
 )

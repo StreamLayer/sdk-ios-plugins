@@ -14,13 +14,13 @@ import StreamLayerSDKTVOS
 #endif
 
 public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
-  
+
   private let googlePALService: SLRGooglePALServiceFacade
-  
+
   public init() {
     self.googlePALService = SLRGooglePALServiceFacade()
   }
-  
+
   public func requestNonceManager(
     baseURL: URL,
     options: SLRGooglePALOptions,
@@ -29,15 +29,15 @@ public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
     let internalOptions = options.internalOptions
     googlePALService.requestNonceManager(baseURL: baseURL, options: internalOptions, completion: completion)
   }
-  
+
   public func sendPlaybackStart() {
     googlePALService.sendPlaybackStart()
   }
-  
+
   public func sendPlaybackEnd() {
     googlePALService.sendPlaybackEnd()
   }
-  
+
   public func sendAdClick() {
     googlePALService.sendAdClick()
   }
