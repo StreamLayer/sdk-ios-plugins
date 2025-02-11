@@ -27,7 +27,7 @@ let package = Package(
       dependencies: [
         .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
         .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
-        .product(name: "StreamLayerWatchParty", package: "sdk-ios", condition: .when(platforms: [.iOS])),
+        .product(name: "StreamLayerWatchParty", package: "sdk-ios", condition: .when(platforms: [.iOS]))
       ],
       path: "Sources/WatchParty/"
     ),
