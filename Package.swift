@@ -26,7 +26,7 @@ let package = Package(
       name: "StreamLayerSDKPluginsWatchParty",
       dependencies: [
         .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
-        .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
+        // .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
         .product(name: "StreamLayerWatchParty", package: "sdk-ios", condition: .when(platforms: [.iOS]))
       ],
       path: "Sources/WatchParty/"
@@ -35,7 +35,7 @@ let package = Package(
       name: "StreamLayerSDKPluginsGooglePAL",
       dependencies: [
         .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
-        .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
+        // .product(name: "StreamLayerTVOS", package: "sdk-ios", condition: .when(platforms: [.tvOS])),
         .product(name: "StreamLayerGooglePAL", package: "sdk-ios", condition: .when(platforms: [.iOS, .tvOS]))
       ],
       path: "Sources/GooglePAL/"
