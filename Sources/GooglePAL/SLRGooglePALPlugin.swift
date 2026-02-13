@@ -16,9 +16,13 @@ import StreamLayerSDKTVOS
 public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
 
   private let googlePALService: SLRGooglePALServiceFacade
+  private let appleTeamIdentifier: String
+  private let appBundleIdentifier: String
 
-  public init() {
+  public init(appleTeamIdentifier: String, appBundleIdentifier: String) {
     self.googlePALService = SLRGooglePALServiceFacade()
+    self.appleTeamIdentifier = appleTeamIdentifier
+    self.appBundleIdentifier = appBundleIdentifier
   }
 
   public func requestNonceManager(
@@ -27,7 +31,14 @@ public class SLRGooglePALPlugin: SLRGooglePALServiceProtocol {
     completion: @escaping ((Result<URL, any Error>) -> Void)
   ) {
     let internalOptions = options.internalOptions
-    googlePALService.requestNonceManager(baseURL: baseURL, options: internalOptions, completion: completion)
+    googlePALService
+      .requestNonceManager(
+        baseURL: baseURL,
+        options: internalOptions,
+        appleTeamIdentifier: appleTeamIdentifier,
+        appBundleIdentifier: appBundleIdentifier,
+        completion: completion
+      )
   }
 
   public func sendPlaybackStart() {
