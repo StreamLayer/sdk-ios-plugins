@@ -16,6 +16,11 @@ let package = Package(
       name: "StreamLayerSDKPluginsGooglePAL",
       type: .static,
       targets: ["StreamLayerSDKPluginsGooglePAL"]
+    ),
+    .library(
+      name: "StreamLayerSDKPluginsPermissions",
+      type: .static,
+      targets: ["StreamLayerSDKPluginsPermissions"]
     )
   ],
   dependencies: [
@@ -39,6 +44,13 @@ let package = Package(
         .product(name: "StreamLayerGooglePAL", package: "sdk-ios", condition: .when(platforms: [.iOS, .tvOS]))
       ],
       path: "Sources/GooglePAL/"
+    ),
+    .target(
+      name: "StreamLayerSDKPluginsPermissions",
+      dependencies: [
+        .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS]))
+      ],
+      path: "Sources/Permissions/"
     )
   ]
 )
