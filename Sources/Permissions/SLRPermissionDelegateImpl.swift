@@ -39,6 +39,7 @@ final class SLRPermissionDelegateImpl: NSObject, SLRPermissionDelegate {
       case .denied: return .denied
       case .notDetermined: return .notDetermined
       case .restricted: return .restricted
+      case .limited: return .authorized
       @unknown default: return .denied
       }
     case .photoLibrary:
