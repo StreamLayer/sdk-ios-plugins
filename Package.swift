@@ -21,6 +21,11 @@ let package = Package(
       name: "StreamLayerSDKPluginsPermissions",
       type: .static,
       targets: ["StreamLayerSDKPluginsPermissions"]
+    ),
+    .library(
+      name: "StreamLayerSDKPluginsPublicChat",
+      type: .static,
+      targets: ["StreamLayerSDKPluginsPublicChat"]
     )
   ],
   dependencies: [
@@ -51,6 +56,14 @@ let package = Package(
         .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS]))
       ],
       path: "Sources/Permissions/"
+    ),
+    .target(
+      name: "StreamLayerSDKPluginsPublicChat",
+      dependencies: [
+        .product(name: "StreamLayer", package: "sdk-ios", condition: .when(platforms: [.iOS])),
+        .product(name: "StreamLayerPublicChat", package: "sdk-ios", condition: .when(platforms: [.iOS]))
+      ],
+      path: "Sources/PublicChat/"
     )
   ]
 )

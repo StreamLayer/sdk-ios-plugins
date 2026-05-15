@@ -41,3 +41,26 @@ Pass plugin bridge object to the sdk:
     StreamLayer.registerPALPlugin(plugin)
   }
 ```
+
+## Public Chat plugin
+
+### Configuration
+
+Add `StreamLayerPublicChat` framework into your project during adding SPM package phase or in your project target Frameworks, Libraries, and Embedded Content section.
+
+The plugin bundles GetStream's `stream-chat-swift` (StreamChat + StreamChatUI). When the plugin is not registered, the SDK silently hides the chat menu item — chat is fully opt-in.
+
+Add this package into your project and import it:
+
+```swift
+import StreamLayerSDKPluginsPublicChat
+```
+
+Pass plugin bridge object to the SDK:
+
+```swift
+  func configureSLPublicChatPlugin() {
+    let plugin: SLRPublicChatServiceProtocol = SLRPublicChatPlugin()
+    StreamLayer.registerPublicChatPlugin(plugin)
+  }
+```

@@ -36,7 +36,7 @@ Icon
 xcuserdata/
 
 # Xcode build artifacts
-build/
+.build/
 DerivedData/
 
 # Obj-C/Swift specific
@@ -62,6 +62,7 @@ xcuserdata/
 
 # Xcode build data
 DerivedData/
+.build
 
 # Obj-C/Swift specific
 *.hmap
